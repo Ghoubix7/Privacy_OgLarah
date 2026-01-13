@@ -1,192 +1,202 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Meus Conteúdos 🔥</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Meus Conteúdos 🔥</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- ===== PIXEL (cole o ID novo aqui) ===== -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'SEU_PIXEL_AQUI');
-    fbq('track', 'PageView');
-  </script>
-  <noscript>
-    <img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=SEU_PIXEL_AQUI&ev=PageView&noscript=1"/>
-  </noscript>
-  <!-- ===================================== -->
+<!-- ===== PIXEL (troque apenas o ID) ===== -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', 'SEU_PIXEL_AQUI');
+fbq('track', 'PageView');
+</script>
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=SEU_PIXEL_AQUI&ev=PageView&noscript=1"/>
+</noscript>
+<!-- ===================================== -->
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-    body {
-      min-height: 100vh;
-      background: radial-gradient(circle at top, #1a1a1a, #000);
-      color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 40px 15px;
-    }
+body{
+  min-height:100vh;
+  background:#0b0b0b;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:#fff;
+}
 
-    .container {
-      max-width: 420px;
-      width: 100%;
-      text-align: center;
-    }
+.container{
+  width:100%;
+  max-width:420px;
+  text-align:center;
+  padding:30px 20px;
+}
 
-    /* AVATAR */
-    .avatar {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid rgba(255,255,255,0.15);
-      margin-bottom: 18px;
-    }
+/* AVATAR */
+.avatar{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  object-fit:cover;
+  border:4px solid rgba(255,255,255,.15);
+  box-shadow:0 0 30px rgba(255,0,80,.25);
+  margin-bottom:18px;
+}
 
-    h1 {
-      font-size: 26px;
-      margin-bottom: 10px;
-    }
+/* TEXTOS */
+h1{
+  font-size:28px;
+  font-weight:bold;
+  margin-bottom:10px;
+}
 
-    p {
-      font-size: 14px;
-      color: #ccc;
-      margin-bottom: 26px;
-    }
+p{
+  font-size:14px;
+  color:#ccc;
+  margin-bottom:28px;
+}
 
-    /* BOTÕES */
-    .btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      width: 100%;
-      padding: 15px;
-      margin-bottom: 14px;
-      border-radius: 12px;
-      text-decoration: none;
-      font-size: 15px;
-      font-weight: bold;
-      color: #fff;
-      box-shadow: 0 6px 25px rgba(0,0,0,0.6);
-      transition: transform .15s ease;
-    }
+/* BOTÕES */
+.btn{
+  width:100%;
+  height:54px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  border-radius:14px;
+  text-decoration:none;
+  font-size:15px;
+  font-weight:bold;
+  color:#fff;
+  margin-bottom:14px;
+  box-shadow:0 6px 20px rgba(0,0,0,.7);
+  transition:.2s;
+}
 
-    .btn:hover {
-      transform: translateY(-3px);
-    }
+.btn:hover{
+  transform:translateY(-3px);
+}
 
-    .btn-telegram {
-      background: linear-gradient(90deg, #0099ff, #00c6ff);
-    }
+/* TELEGRAM */
+.btn-telegram{
+  background:#0ea5e9;
+}
 
-    .btn-privacy {
-      background: linear-gradient(90deg, #c14a00, #ff6a00);
-    }
+/* PRIVACY */
+.btn-privacy{
+  background:#c2410c;
+}
 
-    /* AVISO */
-    .alert {
-      font-size: 12px;
-      color: #aaa;
-      margin-top: 20px;
-    }
+/* ÍCONES BOTÕES */
+.btn svg{
+  width:20px;
+  height:20px;
+  fill:#fff;
+}
 
-    /* REDES */
-    .socials {
-      display: flex;
-      justify-content: center;
-      gap: 18px;
-      margin-top: 22px;
-    }
+/* ALERTA */
+.alert{
+  margin-top:18px;
+  font-size:12px;
+  color:#aaa;
+}
 
-    .socials a {
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #111;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.7);
-      transition: transform .15s ease;
-    }
+/* REDES */
+.socials{
+  margin-top:24px;
+  display:flex;
+  justify-content:center;
+  gap:18px;
+}
 
-    .socials a:hover {
-      transform: translateY(-4px);
-    }
+.socials a{
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 0 20px rgba(0,0,0,.8);
+}
 
-    .socials img {
-      width: 22px;
-      height: 22px;
-    }
+.telegram{background:#0ea5e9;}
+.instagram{background:radial-gradient(circle at 30% 30%, #ff5f6d, #833ab4);}
+.facebook{background:#1877f2;}
 
-    footer {
-      margin-top: 25px;
-      font-size: 12px;
-      color: #666;
-    }
-  </style>
+.socials svg{
+  width:22px;
+  height:22px;
+  fill:#fff;
+}
+
+/* FOOTER */
+footer{
+  margin-top:26px;
+  font-size:12px;
+  color:#666;
+}
+</style>
 </head>
 
 <body>
+<div class="container">
 
-  <div class="container">
+  <!-- FOTO -->
+  <img src="avatar.jpg" class="avatar">
 
-    <!-- FOTO (troque o arquivo) -->
-    <img src="avatar.jpg" alt="Avatar" class="avatar">
+  <h1>🔥 Meus Conteúdos 🔥</h1>
+  <p>
+    Entre no grupo de prévias ou garanta agora meu Privacy com desconto!
+  </p>
 
-    <h1>🔥 Meus Conteúdos 🔥</h1>
-    <p>
-      Entre no grupo de prévias ou garanta agora meu Privacy com desconto!
-    </p>
+  <!-- BOTÃO PRÉVIAS -->
+  <a href="SEU_LINK_PREVIAS" class="btn btn-telegram">
+    <svg viewBox="0 0 24 24"><path d="M21 3L3 10.5l4.5 1.7L9.5 21 12 16l9-13z"/></svg>
+    Meu grupinho de Prévias
+  </a>
 
-    <!-- BOTÕES PRINCIPAIS -->
-    <a href="SEU_LINK_DO_GRUPO" class="btn btn-telegram">
-      Meu grupinho de Prévias
-    </a>
+  <!-- BOTÃO PRIVACY -->
+  <a href="SEU_LINK_PRIVACY" class="btn btn-privacy">
+    <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 017 7v5l3 3-3 3H5l-3-3 3-3V9a7 7 0 017-7z"/></svg>
+    Meu Privacy
+  </a>
 
-    <a href="SEU_LINK_PRIVACY" class="btn btn-privacy">
-      Meu Privacy
-    </a>
-
-    <!-- AVISO -->
-    <div class="alert">
-      ⚠️ Conteúdo permitido apenas para maiores de 18 anos.
-    </div>
-
-    <!-- REDES SOCIAIS -->
-    <div class="socials">
-      <a href="SEU_LINK_TELEGRAM">
-        <img src="telegram.png">
-      </a>
-      <a href="SEU_LINK_INSTAGRAM">
-        <img src="instagram.png">
-      </a>
-      <a href="SEU_LINK_FACEBOOK">
-        <img src="facebook.png">
-      </a>
-    </div>
-
-    <footer>
-      © 2024 | Meus Conteúdos
-    </footer>
-
+  <div class="alert">
+    ⚠️ Conteúdo permitido apenas para maiores de 18 anos.
   </div>
 
+  <!-- REDES -->
+  <div class="socials">
+    <a href="SEU_LINK_TELEGRAM" class="telegram">
+      <svg viewBox="0 0 24 24"><path d="M21 3L3 10.5l4.5 1.7L9.5 21 12 16l9-13z"/></svg>
+    </a>
+    <a href="SEU_LINK_INSTAGRAM" class="instagram">
+      <svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5z"/></svg>
+    </a>
+    <a href="SEU_LINK_FACEBOOK" class="facebook">
+      <svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 10-11.5 9.9v-7h-2.2v-2.9h2.2V9.1c0-2.2 1.3-3.4 3.3-3.4.95 0 1.95.17 1.95.17v2.1h-1.08c-1.07 0-1.4.67-1.4 1.36v1.62h2.38l-.38 2.9h-2v7A10 10 0 0022 12z"/></svg>
+    </a>
+  </div>
+
+  <footer>© 2024 | Meus Conteúdos</footer>
+
+</div>
 </body>
 </html>
